@@ -1,0 +1,13 @@
+syntax = "proto3";
+package  proto;
+
+option go_package = "./pb;pb";
+service Base {
+    rpc Say(Req) returns (Resp);
+}
+message Req {
+    string Info = 1;
+}
+message Resp {
+    string Bck = 1;
+}
